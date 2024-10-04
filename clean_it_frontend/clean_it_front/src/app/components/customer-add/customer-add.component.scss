@@ -1,0 +1,92 @@
+/* Container styles */
+.customer-add-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Heading styles */
+.customer-add-container h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* Success and error messages */
+.success {
+  color: #3c763d;
+  background-color: #dff0d8;
+  padding: 15px;
+  border: 1px solid #d6e9c6;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+.error {
+  color: #a94442;
+  background-color: #f2dede;
+  padding: 15px;
+  border: 1px solid #ebccd1;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+/* Form styles */
+form {
+  background-color: #f9f9f9;
+  padding: 25px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"] {
+  width: 100%;
+  padding: 12px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+  background-color: #218838;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  .customer-add-container {
+    padding: 15px;
+  }
+
+  form {
+    padding: 20px;
+  }
+
+  button[type="submit"] {
+    font-size: 14px;
+    padding: 12px;
+  }
+}

@@ -1,0 +1,49 @@
+<div class="order-container">
+  <h2>Orders</h2>
+
+  <!-- Display error message if any -->
+  <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+
+  <!-- Loading spinner -->
+  <div *ngIf="isLoading" class="loading-spinner">Loading...</div>
+
+  <!-- Dropdown to filter by customer -->
+  <div class="filter">
+    <label for="customerSelect">Filter by Customer:</label>
+    <select id="customerSelect" [(ngModel)]="selectedCustomerId" (change)="filterOrdersByCustomer()">
+      <option value="">All Customers</option>
+      <option *ngFor="let customer of customers" [value]="customer.id">
+        {{ customer.name }} - {{ customer.email }} - {{ customer.phoneNumber }}
+      </option>
+    </select>
+  </div>
+
+  <!-- Display a list of orders -->
+  <div class="order-list">
+    <h3>All Orders</h3>
+    <table>
+      <tr>
+        <th>Order ID</th>
+        <th>Customer ID</th>
+        <th>Status</th>
+        <th>Items</th>
+        <th>Change Status</th>
+      </tr>
+      <tr *ngFor="let order of filteredOrders">
+        <td>{{ order.id }}</td>
+        <td>{{ order.customerId }}</td>
+        <td>{{ order.status }}</td>
+        <td>
+          <ul>
+            <li *ngFor="let item of order.items">{{ item.type }} ({{ item.status }})</li>
+          </ul>
+        </td>
+        <td>
+          <select [(ngModel)]="order.status" (change)="updateOrderStatus(order)">
+            <option *ngFor="let status of statusOptions" [value]="status">{{ status }}</option>
+          </select>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>

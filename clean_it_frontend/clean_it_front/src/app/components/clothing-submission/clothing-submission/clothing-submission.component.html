@@ -1,0 +1,53 @@
+<div class="clothing-submission-container">
+  <h2>Clothing Submission</h2>
+
+  <!-- Display success or error messages -->
+  <div *ngIf="successMessage" class="success">{{ successMessage }}</div>
+  <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+
+  <!-- Step 1: Check if customer exists -->
+  <div *ngIf="!customer">
+    <h3>Step 1: Enter Customer ID</h3>
+    <div class="form-group">
+      <label for="customerId">Customer ID:</label>
+      <input type="text" id="customerId" [(ngModel)]="customerEmailOrId" name="customerId" required />
+      <button type="button" (click)="checkCustomer()">Check Customer</button>
+    </div>
+
+    <!-- If customer not found, ask to create a new one -->
+    <div *ngIf="customerNotFound">
+      <p>Customer not found. Ask the ADMIN to add you as a customer</p>
+    </div>
+  </div>
+
+  <!-- Step 2: Add clothing order once customer is found -->
+  <div *ngIf="customer">
+    <h3>Step 2: Submit Clothing Order for {{ customer.name }}</h3>
+
+    <form (ngSubmit)="submitOrder()">
+      <div class="form-group">
+        <label>Clothing Item Type:</label>
+        <input type="text" [(ngModel)]="newTextileItem.type" name="type" placeholder="e.g., Shirt, Trousers" required />
+
+        <label>Clothing Item Status:</label>
+        <select [(ngModel)]="newTextileItem.status" name="status">
+          <option value="pending">Pending</option>
+          <option value="cleaned">Cleaned</option>
+          <option value="returned">Returned</option>
+        </select>
+
+        <button type="button" (click)="addTextileItem()">Add Item</button>
+      </div>
+
+      <!-- Display the list of added textile items -->
+      <div class="item-list">
+        <h3>Items in this order:</h3>
+        <ul>
+          <li *ngFor="let item of newOrder.items">{{ item.type }} ({{ item.status }})</li>
+        </ul>
+      </div>
+
+      <button type="submit">Submit Order</button>
+    </form>
+  </div>
+</div>

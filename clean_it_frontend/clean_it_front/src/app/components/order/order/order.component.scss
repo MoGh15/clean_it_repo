@@ -1,0 +1,136 @@
+/* Container-Stile */
+.order-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Überschriften-Stile */
+.order-container h2,
+.order-container h3 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Fehlermeldung */
+.error {
+  color: #a94442;
+  background-color: #f2dede;
+  padding: 15px;
+  border: 1px solid #ebccd1;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+/* Lade-Spinner */
+.loading-spinner {
+  text-align: center;
+  font-size: 18px;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+/* Filter-Stile */
+.filter {
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.filter label {
+  margin-right: 10px;
+  font-weight: 600;
+}
+
+.filter select {
+  flex: 1;
+  padding: 10px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+/* Bestellliste-Stile */
+.order-list table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.order-list th,
+.order-list td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+.order-list th {
+  background-color: #f8f9fa;
+  font-weight: 700;
+}
+
+.order-list tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.order-list tr:hover {
+  background-color: #e9ecef;
+}
+
+.order-list ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.order-list li {
+  margin-bottom: 5px;
+}
+
+/* Dropdown für Statusänderung */
+.order-list select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .order-list table,
+  .order-list th,
+  .order-list td {
+    display: block;
+  }
+
+  .order-list th,
+  .order-list td {
+    width: 100%;
+  }
+
+  .order-list tr {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .order-list th {
+    background-color: transparent;
+    font-weight: bold;
+  }
+
+  .order-list td {
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+  }
+
+  .order-list td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    padding-left: 15px;
+    font-weight: bold;
+    text-align: left;
+  }
+}

@@ -1,0 +1,39 @@
+<mat-toolbar class="header-style">
+
+  <div class="left-items">
+
+  <a class="nav-link" mat-list-item class="nav-item logo-item">
+    <img src="assets/logos/prodyna_dark.webp" alt="logo" class="logo-image" />
+  </a>
+    <!-- Order button -->
+    <a class="nav-link"  *ngIf="role === 'admin'"  [routerLink]="['/order']" routerLinkActive #rla2="routerLinkActive"
+       [ngClass]="{ 'active-link': currentNavItem === 'order' }"
+       (click)="onClickNavItem('order')">Orders</a>
+
+  <!-- Dashboard button -->
+  <a class="nav-link" [routerLink]="['/clothing-submission']" routerLinkActive #rla="routerLinkActive"
+     [ngClass]="{ 'active-link': currentNavItem === 'clothing-submission' }"
+     (click)="onClickNavItem('clothing-submission')">Clothing Submission</a>
+  <!-- ADD Customer button -->
+  <a class="nav-link"  *ngIf="role === 'admin'"  [routerLink]="['/customer-add']" routerLinkActive #rla2="routerLinkActive"
+     [ngClass]="{ 'active-link': currentNavItem === 'customer-add' }"
+     (click)="onClickNavItem('customer-add')">Add Customer</a>
+
+  </div>
+  <div class="container">
+    <mat-card-title class="ueberschrift"> Clean IT</mat-card-title>
+  </div>
+
+
+  <div class="right-items">
+  <!-- Right-aligned buttons -->
+  <div class="header-buttons">
+    <!-- Logout button -->
+    <a class="nav-link"
+       [ngClass]="{ 'active-link': currentNavItem === 'login' }"
+       (click)="onClickLogout()">Log out</a>
+  </div>
+  </div>
+</mat-toolbar>
+
+

@@ -1,0 +1,97 @@
+.header-style {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 72px; /* set the height of the header */
+  z-index: 999; /* set the z-index to a high value to make sure the header is on top */
+  padding: 0 16px; /* add padding to the left and right of the header */
+  border-bottom: 3px solid #9bbf29;
+
+  background-color: #32352b;
+
+}
+
+.logo-image {
+  width: 110px; /* set the width of the logo image */
+  height: 70px; /* set the height to auto so that the aspect ratio is maintained */
+  margin-right: 20px;
+}
+#darkModeBtn{
+  margin-left: 10px;
+  margin-right: 8px;
+}
+#darkModeSpan{
+  margin-left: 16px;
+  font-size: 18px;
+}
+
+.nav-link {
+  display: block; /* Macht den Link zu einem Blockelement, um ihn besser zu stylen */
+  font-size: 19px;
+  padding: 1.3rem 1rem; /* Fügt Abstände um den Linkinhalt hinzu */
+  text-decoration: none; /* Entfernt die Unterstreichung des Links */
+  margin-bottom: 0px;
+  margin-right: 20px; /* Fügen Sie hier den gewünschten Abstand hinzu */
+  cursor: pointer;
+  padding: 1.6rem 1rem; /* Vergrößert die Polsterung um den Linkinhalt */
+}
+
+.header-buttons {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+
+.left-items, .right-items {
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.ueberschrift {
+  font-size: 27px;
+  color: #9bbf29
+
+}
+
+.nav-link.active, .nav-link.active-link  {
+  color:  #7e962e;
+}
+
+.active-link  {
+  border-bottom: 2.5px solid #7e962e;
+  color: #7e962e;
+}
+
+.active-link.blue {
+  color: blue;
+}
+
+
+.nav-link {
+  color: #9bbf29;
+}
+
+.nav-link:hover {
+  color: #7e962e;
+}
+
+
+
+
+
+
+
+

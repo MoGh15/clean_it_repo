@@ -1,0 +1,19 @@
+<br>
+<mat-card-title id="dialogTitle" class="mat-dialog-title">{{data.caption}}</mat-card-title>
+
+<div class="mat-dialog-content">
+  <mat-card-title class="log-out-dialog-text">{{data.text}}</mat-card-title>
+</div>
+
+<div id="btnContainer" class="mat-dialog-actions">
+  <button class="noBttn primary" mat-raised-button (click)="dialogButtonClicked('NO')">
+    <i class="material-icons">cancel</i>
+    <mat-card-title class="text-size">No</mat-card-title>
+  </button>
+    <button class="yesBttn primary" mat-raised-button (click)="dialogButtonClicked('YES')">
+      <i class="material-icons">logout</i>
+      <mat-card-title class="text-size">Yes</mat-card-title>
+  </button>
+</div>
+
+

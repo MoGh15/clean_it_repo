@@ -1,0 +1,73 @@
+/* Dialog-Titel */
+#dialogTitle {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+  padding: 16px;
+  text-align: center;
+}
+
+/* Dialog-Inhalt */
+.mat-dialog-content {
+  font-size: 18px;
+  margin: 0;
+  padding: 16px;
+
+
+}
+
+#btnContainer {
+  display: flex;
+  justify-content: space-between; /* Abstand zwischen Buttons erhöhen */
+  align-items: center; /* Neu hinzugefügt */
+  margin: 0;
+  padding: 16px;
+}
+
+.noBttn {
+  background-color:  #9bbf29;
+  color: #32352b;
+  margin-right: 6%; /* Links ausrichten */
+}
+
+.yesBttn {
+background-color: red;
+  color: #fff;
+  margin-left: 6%; /* Rechts ausrichten */
+}
+
+
+
+.noBttn, .yesBttn {
+  display: flex; /* Neu hinzugefügt */
+  align-items: center; /* Neu hinzugefügt */
+  justify-content: center; /* Neu hinzugefügt */
+  border-radius: 36px;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  border: none;
+}
+
+.noBttn i, .yesBttn i {
+  margin-right: 8px; /* Oder eine andere Einheit, die Ihren Bedürfnissen entspricht */
+}
+
+.material-icons{
+
+  font-size: 17px;
+}
+
+.log-out-dialog-text {
+
+  text-align: center;
+}
+
+.text-size{
+
+  font-size: 17px;
+}
+
+
+
+

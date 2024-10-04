@@ -1,0 +1,32 @@
+
+<div class="centered-wrapper">
+<mat-card class="login-card">
+  <mat-card-header>
+    <mat-card-title class="login-title">Log in</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form (submit)="onSubmit()">
+      <div class="form-field">
+        <mat-card-title class="username-input">Username*</mat-card-title>
+        <input type="text" name="username" [(ngModel)]="username" class="login-input" id="username-input">
+      </div>
+
+      <div class="form-field">
+        <mat-card-title class="password-input">Password*</mat-card-title>
+        <input type="password" name="password" [(ngModel)]="password" class="login-input" id="password-input">
+      </div>
+      <button mat-raised-button class="login-button">
+      <i class="material-icons">login</i> <!-- Logout Icon -->
+      <span>Log in</span>
+      </button>
+      <div *ngIf="getAuthService().loginError" class="login-error">Invalid username or password</div>
+    </form>
+
+    <!--
+    <mat-card-title class="register-text">
+      <p>No account yet? <a class="register-link"(click)="openDialog()">Register now.</a></p>
+    </mat-card-title>
+    -->
+  </mat-card-content>
+</mat-card>
+</div>

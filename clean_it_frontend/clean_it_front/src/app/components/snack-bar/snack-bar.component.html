@@ -1,0 +1,11 @@
+<div class="snack-container">
+  <div>
+    <mat-icon id="icon"><span class="material-symbols-outlined">{{ icon() }}</span></mat-icon>
+  </div>
+  <div>
+    <span class="snack-text" data-cy="snackbarText">{{ data.message }}</span>
+  </div>
+  <div *ngIf="data.snackType == 'Download'" class="spinner-wrapper">
+    <mat-spinner [diameter]="25"></mat-spinner>
+  </div>
+</div>

@@ -1,0 +1,83 @@
+.registration-card {
+  width: 350px;
+  height: 300px;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.registration-title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #003D69;
+}
+
+.registration-form-field {
+  margin-bottom: 20px;
+  width: 100%; /* Add this line */
+  box-sizing: border-box; /* Add this line */
+}
+.mat-form-field-wrapper {
+  padding-bottom: 0; /* Add this line */
+}
+
+.registration-input {
+  font-size: 100%;
+  color: rgba(0, 0, 0, 0.87);
+  border: 1px solid #ccc;
+  border-bottom: 2px solid #ccc;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-bottom-color 0.3s ease;
+  border-radius: 8px;
+}
+
+.registration-input:focus {
+  outline: none;
+  border-bottom-color: #003D69;
+}
+
+.registration-button {
+  width: 100%; /* Button in voller Breite */
+  border-radius: 36px;
+  border: none;
+  padding: 8px 30px;
+  cursor: pointer;
+  margin-bottom: 4%;
+  font-size: 16px;
+  font-weight: bold;
+  transition: 0.3s;
+  margin-top: 3%;
+  margin-bottom: 1px;
+}
+
+.registration-button:hover {
+  background-color:#003D69;
+}
+
+.registration-button i.material-icons {
+  font-size: 20px; /* Passen Sie diese Größe an Ihre Bedürfnisse an */
+  margin-right: 5px; /* Fügen Sie einen rechten Rand hinzu, um den Abstand zum Text zu erhöhen */
+  vertical-align: middle; /* Zentriert das Symbol vertikal relativ zum Text */
+}
+
+
+.username-input{
+  font-size: 10px;
+  color: #003D69;
+  margin-bottom: 4px;
+}
+
+.password-input{
+  font-size: 10px;
+  color: #003D69;
+  margin-bottom: 2px;
+}
+
+

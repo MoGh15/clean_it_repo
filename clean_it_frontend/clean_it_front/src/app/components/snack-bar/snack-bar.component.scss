@@ -1,0 +1,49 @@
+/* Styles for snackbars */
+.snack-container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.snack-container #icon {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.snack-container.success {
+  background-color: #4caf50;
+}
+
+.snack-container.success #icon {
+  color: #fff;
+}
+
+.snack-container.error {
+  background-color: #f44336;
+}
+
+.snack-container.error #icon {
+  color: #fff;
+}
+
+.snack-container.warn {
+  background-color: #ff9800;
+}
+
+.snack-container.warn #icon {
+  color: #fff;
+}
+
+.snack-container.download {
+  background-color: #2196f3;
+}
+
+.snack-container.download #icon {
+  color: #fff;
+}
+
+.spinner-wrapper {
+  margin-left: 10px;
+}

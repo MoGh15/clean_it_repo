@@ -1,0 +1,67 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+
+@mixin color($theme) {
+  // Get the color config from the theme.
+  $color-config: mat.get-color-config($theme);
+
+
+  // Get the primary color palette from the color-config.
+  $primary-palette: map.get($color-config, 'primary');
+  $accent-palette:  map.get($color-config, 'accent');
+  $warn-palette:    map.get($color-config, 'warn');
+
+  $is-dark-theme: map.get($color-config, 'is-dark');
+
+  .header-style {
+    border-bottom: 3px solid mat.get-color-from-palette($primary-palette, 200);
+
+    background-color: mat.get-color-from-palette($primary-palette,50);
+
+    @if $is-dark-theme == true {
+      background-color: mat.get-color-from-palette($primary-palette, 500);
+    }
+  }
+
+  .nav-link.active, .nav-link.active-link  {
+    color:  mat.get-contrast-color-from-palette($primary-palette,900);
+  }
+
+  .active-link  {
+    border-bottom: 2.5px solid mat.get-contrast-color-from-palette($primary-palette,900);
+    color:  mat.get-contrast-color-from-palette($primary-palette,900);
+  }
+
+  .active-link.blue {
+    color: blue;
+  }
+
+
+  .nav-link {
+    color: mat.get-contrast-color-from-palette($accent-palette,500);
+  }
+
+  .nav-link:hover {
+    color: mat.get-contrast-color-from-palette($primary-palette,900);
+  }
+
+  #darkModeSpan{
+    color: mat.get-contrast-color-from-palette($accent-palette,500);
+  }
+
+  .ueberschrift {
+    color:    mat.get-color-from-palette($primary-palette, 400);
+    @if $is-dark-theme == true {
+      color: mat.get-contrast-color-from-palette($accent-palette,500);
+    }
+  }
+
+}
+
+@mixin theme($theme) {
+  $color-config: mat.get-color-config($theme);
+  @if $color-config != null {
+    @include color($theme);
+  }
+
+}

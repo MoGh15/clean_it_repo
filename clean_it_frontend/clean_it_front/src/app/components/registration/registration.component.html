@@ -1,0 +1,29 @@
+<mat-card class="registration-card">
+  <mat-card-header>
+    <mat-card-title class="registration-title">Registration</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form (submit)="onSubmit()">
+      <div class="registration-form-field">
+        <mat-card-title class="username-input">Username*</mat-card-title>
+        <input matInput  type="text" name="username" [(ngModel)]="user.username" class="registration-input" required>
+      </div>
+
+      <div class="registration-form-field">
+        <mat-card-title class="password-input">Password*</mat-card-title>
+        <input matInput  type="password" name="password" [(ngModel)]="user.password" class="registration-input" required>
+      </div>
+      <button mat-raised-button class="registration-button">
+        <i class="material-icons">app_registration</i>
+        <span>Register</span>
+      </button>
+
+        <button mat-raised-button class="registration-button" type="button" (click)="onCancel($event)">
+          <i class="material-icons">cancel</i>
+          <span>Cancel</span>
+        </button>
+
+
+      </form>
+    </mat-card-content>
+  </mat-card>
