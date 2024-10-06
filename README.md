@@ -16,10 +16,11 @@
 
 ## Overview
 This project is designed to handle daily operations for a fictional textile cleaning company, **Clean It! AG**. The application consists of a Spring Boot backend (which serves as the API layer), an Angular frontend for interacting with the system, and MongoDB as the database. Docker and Docker Compose are used to manage the backend and MongoDB services efficiently.
-![Architecture Diagram](assets/architektur.png)
+
 ---
 
 ## Architecture
+![Architecture Diagram](assets/architektur.png)
 
 ### Backend (Spring Boot)
 The backend is built using **Spring Boot** and provides a REST API for managing customers, orders, and users. The backend communicates with the MongoDB database to store and retrieve data.
