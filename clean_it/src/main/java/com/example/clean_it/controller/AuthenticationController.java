@@ -7,7 +7,7 @@ import com.example.clean_it.model.auth.AuthenticationResponse;
 import com.example.clean_it.model.auth.RegisterRequest;
 import com.example.clean_it.model.user.User;
 import com.example.clean_it.service.authenticationService.AuthenticationService;
-import com.example.clean_it.service.userService.UserRepository;
+import com.example.clean_it.mongo_db_repo.UserRepository;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;

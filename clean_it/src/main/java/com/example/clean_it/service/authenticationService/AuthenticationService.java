@@ -7,8 +7,8 @@ import com.example.clean_it.model.auth.RegisterRequest;
 import com.example.clean_it.model.token.Token;
 import com.example.clean_it.model.token.TokenType;
 import com.example.clean_it.model.user.User;
-import com.example.clean_it.service.tokenService.TokenRepository;
-import com.example.clean_it.service.userService.UserRepository;
+import com.example.clean_it.mongo_db_repo.TokenRepository;
+import com.example.clean_it.mongo_db_repo.UserRepository;
 import com.example.clean_it.util.security.JwtService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 

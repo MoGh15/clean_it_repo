@@ -1,7 +1,7 @@
 package com.example.clean_it.util.security;
 
 
-import com.example.clean_it.service.tokenService.TokenRepository;
+import com.example.clean_it.mongo_db_repo.TokenRepository;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

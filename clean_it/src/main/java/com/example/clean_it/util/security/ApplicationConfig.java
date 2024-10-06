@@ -1,6 +1,6 @@
 package com.example.clean_it.util.security;
 
-import com.example.clean_it.service.userService.UserRepository;
+import com.example.clean_it.mongo_db_repo.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

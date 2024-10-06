@@ -1,4 +1,4 @@
-package com.example.clean_it.service.userService;
+package com.example.clean_it.mongo_db_repo;
 
 
 import com.example.clean_it.model.user.User;
